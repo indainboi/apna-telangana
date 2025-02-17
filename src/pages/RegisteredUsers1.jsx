@@ -6,7 +6,7 @@ const users = [
         name: "Ramu Naik",
         location1: "Pedda Gudem",
         location2: "Kodad",
-        distance: "2",
+        area: "2",
         image: "/images/users/ramu.png",
         cropName: "Tomato",
         cropImage: "/images/crops/tomato.png",
@@ -15,7 +15,7 @@ const users = [
         name: "Suresh Yadav",
         location1: "Venkatapur",
         location2: "Nizambad",
-        distance: "3",
+        area: "2",
         image: "/images/users/suresh.png",
         cropName: "Paddy",
         cropImage: "/images/crops/paddy.png",
@@ -25,7 +25,7 @@ const users = [
         name: "Gopal Patel",
         location1: "Chintapalle",
         location2: "Peddapuram",
-        distance: "4",
+        area: "1.5",
         image: "/images/users/gopal.png",
         cropName: "Chilli",
         cropImage: "/images/crops/chilli.png",
@@ -34,7 +34,7 @@ const users = [
         name: "Lakshmi Reddy",
         location1: "Anantapuram",
         location2: "Tadipatri",
-        distance: "4",
+        area: "0.5",
         image: "/images/users/lakshmi.png",
         cropName: "Cotton",
         cropImage: "/images/crops/cotton.png",
@@ -43,7 +43,7 @@ const users = [
         name: "Rajesh Gowda",
         location1: "Tumkur Palle",
         location2: "Muddur",
-        distance: "5",
+        area: "1",
         image: "/images/users/rajesh.png",
         cropName: "Groundnut",
         cropImage: "/images/crops/groundnut.png",
@@ -52,7 +52,7 @@ const users = [
         name: "Kamla Devi",
         location1: "Nallavelli",
         location2: "Kalwakuthy",
-        distance: "5",
+        area: "2",
         image: "/images/users/kamla.png",
         cropName: "Sugarcane",
         cropImage: "/images/crops/sugarcane.png",
@@ -69,7 +69,7 @@ const RegisteredUsers1 = () => {
                 image={user.image}
                 location1={user.location1}
                 location2={user.location2}
-                distance={user.distance}
+                area={user.area}
                 cropName={user.cropName}
                 cropImage={user.cropImage}
                 to={user.to}

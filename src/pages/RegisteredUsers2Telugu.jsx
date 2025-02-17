@@ -10,7 +10,7 @@ const users = [
         name: "గోపాల్ పటేల్",
         location1: "చింతపల్లె",
         location2: "పెద్దాపురం",
-        distance: "4",
+        distance: "1.5",
         image: "/images/users/gopal.png",
         cropName: "మిరప",
         cropImage: "/images/crops/chilli.png",
@@ -19,7 +19,7 @@ const users = [
         name: "లక్ష్మి రెడ్డి",
         location1: "వెంకటాపూర్",
         location2: "నిజామాబాద్",
-        distance: "4",
+        distance: "0.5",
         image: "/images/users/lakshmi.png",
         cropName: "పత్తి",
         cropImage: "/images/crops/cotton.png",
@@ -28,7 +28,7 @@ const users = [
         name: "రాజేష్ గౌడ",
         location1: "తుంకూర్ పల్లె",
         location2: "మద్దూర్",
-        distance: "5",
+        distance: "1",
         image: "/images/users/rajesh.png",
         cropName: "వేరుశనగ",
         cropImage: "/images/crops/groundnut.png",
@@ -37,7 +37,7 @@ const users = [
         name: "కమల దేవి",
         location1: "నల్లవెల్లి",
         location2: "కల్వకుర్తి",
-        distance: "5",
+        distance: "2",
         image: "/images/users/kamla.png",
         cropName: "చెరకు",
         cropImage: "/images/crops/sugarcane.png",
@@ -87,7 +87,7 @@ const ContactUser = () => {
                     <div className='flex flex-col'>
                         <span className='text-[#374151]'>సురేష్ యాదవ్</span>
                         <span className='text-sm text-[#4B5563]'>అనంతపురం &#8226; తాడిపత్రి</span>
-                        <span className='text-sm text-[#4B5563]'>3 km</span>
+                        <span className='text-sm text-[#4B5563]'>Area: 2 acre</span>
                     </div>
                 </div>
                 <div className='flex flex-col items-center gap-1'>

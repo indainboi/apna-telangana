@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import BreakLine from "./BreakLine"
 
-const UserCard = ({ name, image, location1, location2, distance, cropName, cropImage, to}) => {
+const UserCard = ({ name, image, location1, location2, area, cropName, cropImage, to}) => {
     return (
         <Link to={to}>
             <div className='flex justify-between items-center px-5 py-4'>
@@ -10,7 +10,7 @@ const UserCard = ({ name, image, location1, location2, distance, cropName, cropI
                     <div className='flex flex-col'>
                         <span className='text-[#374151]'>{name}</span>
                         <span className='text-sm text-[#4B5563]'>{location1} &#8226; {location2}</span>
-                        <span className='text-sm text-[#4B5563]'>{distance} km</span>
+                        <span className='text-sm text-[#4B5563]'>Area: {area} acre</span>
                     </div>
                 </div>
                 <div className='flex flex-col items-center gap-1'>
