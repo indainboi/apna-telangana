@@ -48,7 +48,7 @@ const MarketPlace = () => {
             <div className='p-5'>
                 <h4 className='font-semibold mb-4'>Dealers Information</h4>
                 <div className='grid grid-cols-3 gap-3'>
-                    {dealers.map(dealer => <DealerCard name={dealer.name} image={dealer.image} />)}
+                    {dealers.map(dealer => <DealerCard key={dealer.name} name={dealer.name} image={dealer.image} />)}
                 </div>
             </div>
         </div>

@@ -101,7 +101,7 @@ const CommunityPageTelugu = () => {
                     <span className='text-sm hidden'>See more</span>
                 </div>
                 <div className='flex gap-3 mt-3 overflow-auto'>
-                    {projects.map(project => <ProjectCard title={project.title} location={project.location} image={project.image} to={project.to} />)}
+                    {projects.map(project => <ProjectCard key={project.title} title={project.title} location={project.location} image={project.image} to={project.to} />)}
                 </div>
             </div>
 
@@ -114,7 +114,7 @@ const CommunityPageTelugu = () => {
                     <Link to={"/community/micro-irrigation/registered-users1-telugu"} className='text-sm'>See more</Link>
                 </div>
                 <div className='flex gap-4 mt-3 overflow-auto'>
-                    {users.map(user => <UserDetail name={user.name} location={user.location} distance={user.distance} image={user.image} />)}
+                    {users.map(user => <UserDetail key={user.name} name={user.name} location={user.location} distance={user.distance} image={user.image} />)}
                 </div>
             </div>
 
@@ -129,7 +129,7 @@ const CommunityPageTelugu = () => {
                     </div>
                 </div>
                 <div className='flex flex-col gap-4'>
-                    {communityPosts.map(post => <SocialMediaPost
+                    {communityPosts.map(post => <SocialMediaPost key={post.name}
                         name={post.name}
                         role={post.role}
                         image={post.image}

@@ -6,9 +6,9 @@ import BreakLine from '../components/BreakLine'
 
 const traders = [
     { name: "Sai Prabhakar", image: "/images/market-place/sai.png", distance: "2km"},
-    { name: "Kiran Reddy", image: "/images/market-place/kiran.png", distance: "2km"},
-    { name: "Akshay Balaji", image: "/images/market-place/akshay.png", distance: "2km"},
-    { name: "Sashi Shekhar", image: "/images/market-place/sashi.png", distance: "2km"}
+    { name: "Kiran Reddy", image: "/images/market-place/kiran.png", distance: "3km"},
+    { name: "Akshay Balaji", image: "/images/market-place/akshay.png", distance: "4km"},
+    { name: "Sashi Shekhar", image: "/images/market-place/sashi.png", distance: "5km"}
 ]
 
 const FarmerCalender = () => {
@@ -24,7 +24,7 @@ const FarmerCalender = () => {
             </div>
             <div>
                 <span className='font-semibold mb-3 px-5'>Traders</span>
-                {traders.map(trader => <TraderCard name={trader.name} image={trader.image} distance={trader.distance} />)}
+                {traders.map(trader => <TraderCard key={trader.distance} name={trader.name} image={trader.image} distance={trader.distance} />)}
             </div>
         </div>
     )
@@ -38,7 +38,7 @@ const TraderCard = ({ name, image, distance }) => {
             <div className='flex justify-between items-center px-5 py-5'>
                 <div className='flex items-center gap-2'>
                     <img className='w-10' src={image} />
-                    <div>
+                    <div className='flex flex-col'>
                         <span>{name}</span>
                         <span className='text-sm text-[#4B5563]'>{distance}</span>
                     </div>

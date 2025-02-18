@@ -26,7 +26,7 @@ const TraderCalender = () => {
             </div>
             <div>
                 <span className='font-semibold mb-3 px-5'>Locations</span>
-                {locations.map(location => <LocationCard name={location.name} area={location.area} number={location.number} />)}
+                {locations.map(location => <LocationCard key={location.name} name={location.name} area={location.area} number={location.number} />)}
             </div>
         </div>
     )

@@ -151,7 +151,7 @@ const ApnaTelanganaTelugu = () => {
         <div>
             <ApnaTelanganaHeader title={"అప్నా తెలంగాణ"} to={"/homepage-telugu"} />
             <div className='flex flex-col'>
-                {SocialFeedPosts.map(post => <SocialMediaPost
+                {SocialFeedPosts.map(post => <SocialMediaPost key={post.name}
                     name={post.name}
                     role={post.role}
                     position={post.position}

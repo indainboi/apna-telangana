@@ -64,7 +64,7 @@ const RegisteredUsers1Telugu = () => {
     <div>
         <PageHeader title={"మైక్రో ఇరిగేషన్"} to={"/community/micro-irrigation-telugu"}  />
         <div className='flex flex-col'>
-            {users.map(user => <UserCard
+            {users.map(user => <UserCard key={user.name}
                 name={user.name}
                 image={user.image}
                 location1={user.location1}

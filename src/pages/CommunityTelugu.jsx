@@ -52,7 +52,7 @@ const CommunityTelugu = () => {
                 <h4 className="font-semibold mb-3">అన్ని కమ్యూనిటీలు</h4>
                 <div className="grid grid-cols-3 gap-3">
                     {items.map(item => (
-                        <CommunityCard name={item.name} image={item.image} />
+                        <CommunityCard key={item.name} name={item.name} image={item.image} />
                     ))}
                 </div>
             </div>

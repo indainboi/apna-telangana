@@ -16,6 +16,7 @@ const dealers = [
 
 
 const MarketPlaceTelugu = () => {
+    console.log("rendering")
     return (
         <div>
             <PageHeader title={"మార్కెట్"} to={"/homepage-telugu"} />
@@ -29,7 +30,7 @@ const MarketPlaceTelugu = () => {
                         <FaArrowRight size={20} />
                     </div>
                 </div>
-                <Link to={"/market-place/farmer-calender-telugu"}>
+                <Link to={"/market-place-telugu/farmer-calender-telugu"}>
                     <div className="bg-[url('/images/trader-calender.png')] bg-cover px-6 py-9 text-white">
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-3 items-center'>
@@ -48,7 +49,7 @@ const MarketPlaceTelugu = () => {
             <div className='p-5'>
                 <h4 className='font-semibold mb-4'>డీలర్ల సమాచారం</h4>
                 <div className='grid grid-cols-3 gap-3'>
-                    {dealers.map(dealer => <DealerCard name={dealer.name} image={dealer.image} />)}
+                    {dealers.map(dealer => <DealerCard key={dealer.name} name={dealer.name} image={dealer.image} />)}
                 </div>
             </div>
         </div>

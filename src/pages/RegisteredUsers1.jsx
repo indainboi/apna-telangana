@@ -64,7 +64,7 @@ const RegisteredUsers1 = () => {
     <div>
         <PageHeader title={"Micro Irrigation"} to={"/community/micro-irrigation"}  />
         <div className='flex flex-col'>
-            {users.map(user => <UserCard
+            {users.map(user => <UserCard key={user.name}
                 name={user.name}
                 image={user.image}
                 location1={user.location1}

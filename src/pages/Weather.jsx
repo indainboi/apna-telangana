@@ -77,7 +77,7 @@ const Weather = () => {
             <div className="px-5 py-4">
                 <h4 className="mb-3">Next 7 Days</h4>
                 <div className="flex flex-col gap-4">
-                    {next7DaysData.map((day) => <NextDayCard range={day.range} date={day.date} percentage={day.percentage} type={day.type} />)}
+                    {next7DaysData.map((day) => <NextDayCard key={day.date} range={day.range} date={day.date} percentage={day.percentage} type={day.type} />)}
                 </div>
             </div>
 

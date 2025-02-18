@@ -61,7 +61,7 @@ const RegisteredUsers2Telugu = () => {
 
                 <ContactUser />
 
-                {users.map(user => <UserCard
+                {users.map(user => <UserCard key={user.name}
                     name={user.name}
                     image={user.image}
                     location1={user.location1}
@@ -90,16 +90,9 @@ const ContactUser = () => {
                         <span className='text-sm text-[#4B5563]'>Area: 2 acre</span>
                     </div>
                 </div>
-                <div className='flex flex-col items-center gap-1'>
-                    <div className='bg-[#F3F4F6] rounded-full border w-[60px] h-[60px] flex items-center justify-center'>
-                        <img className='w-[25px] object-cover' src="/images/crops/paddy.png" />
-                    </div>
-                    <span className='text-[#4B5563] text-sm font-thin'>వరి</span>
+                <div className='flex justify-between gap-2 text-sm text-[#4B5563] mb-4'>
+                    <ContactButton name={"రిక్వెస్ట్"} logo={<FiPhone />} />
                 </div>
-            </div>
-            <div className='flex justify-between gap-2 text-sm text-[#4B5563] mb-4'>
-                <ContactButton name={"మెసేజ్ చేయండి"} logo={<MdOutlineEmail />} />
-                <ContactButton name={"నంబర్ రిక్వెస్ట్"} logo={<FiPhone />} />
             </div>
             <BreakLine />
         </Link>

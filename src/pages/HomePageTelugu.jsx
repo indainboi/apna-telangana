@@ -29,7 +29,7 @@ const HomePageTelugu = () => {
       <div className='px-5 py-4'>
         <div className='grid grid-cols-2 gap-4'>
           {menus.map((menu, index) => (
-            <Link to={menu.to}>
+            <Link key={menu.name} to={menu.to}>
             <MenuCard key={index} name={menu.name} url={menu.url} />
             </Link>
           ))}

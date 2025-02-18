@@ -60,8 +60,8 @@ function App() {
           <Route path="/community/micro-irrigation/ravi-kumar-telugu" element={<RaviKumarTelugu />} />
           <Route path="/community/micro-irrigation/nizambad-telugu" element={<NizambadTelugu />} />
           <Route path="/market-place-telugu" element={<MarketPlaceTelugu />} />
-          <Route path="/market-place/farmer-calender-telugu" element={<FarmerCalenderTelugu />} />
-          <Route path="/market-place/trader-calender-telugu" element={<TraderCalenderTelugu />} />
+          <Route path="/market-place-telugu/farmer-calender-telugu" element={<FarmerCalenderTelugu />} />
+          <Route path="/market-place-telugu/trader-calender-telugu" element={<TraderCalenderTelugu />} />
           <Route path="/apna-telangana-telugu" element={<ApnaTelanganaTelugu />} />
 
         </Routes>

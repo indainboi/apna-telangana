@@ -18,15 +18,15 @@ const TraderCalenderTelugu = () => {
         <div>
             <PageHeader title={"మార్కెట్"} to={"/market-place-telugu"} />
             <div className='px-5 flex gap-2 mb-3'>
-                <Link to={"/market-place/farmer-calender-telugu"} className='w-full flex justify-center items-center text-sm rounded-md p-2 font-semibold border border-[#50C878]'>రైతు క్యాలెండర్</Link>
-                <Link to={"/market-place/trader-calender-telugu"} className='w-full flex justify-center items-center text-sm rounded-md p-2 font-semibold bg-[#50C878]'>ట్రేడర్ క్యాలెండర్</Link>
+                <Link to={"/market-place-telugu/farmer-calender-telugu"} className='w-full flex justify-center items-center text-sm rounded-md p-2 font-semibold border border-[#50C878]'>రైతు క్యాలెండర్</Link>
+                <Link to={"/market-place-telugu/trader-calender-telugu"} className='w-full flex justify-center items-center text-sm rounded-md p-2 font-semibold bg-[#50C878]'>ట్రేడర్ క్యాలెండర్</Link>
             </div>
             <div className='px-4 mb-4'>
                 <img src="/images/market-place/calender-telugu.png" alt="" />
             </div>
             <div>
                 <span className='font-semibold mb-3 px-5'>లొకేషన్లు</span>
-                {locations.map(location => <LocationCard name={location.name} area={location.area} number={location.number} />)}
+                {locations.map(location => <LocationCard key={location.name} name={location.name} area={location.area} number={location.number} />)}
             </div>
         </div>
     )

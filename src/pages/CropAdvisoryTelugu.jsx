@@ -22,7 +22,7 @@ const CropAdvisoryTelugu = () => {
             <h3 className='font-semibold mb-4 px-5'>నా పంటలు</h3>
             <div className='px-5 overflow-auto'>
                 <div className='flex gap-5'>
-                    {crops.map(crop => <CropCard name={crop.name} image={crop.image} />)}
+                    {crops.map(crop => <CropCard key={crop.name} name={crop.name} image={crop.image} />)}
                 </div>
             </div>
 
