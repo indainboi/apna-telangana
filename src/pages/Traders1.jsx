@@ -1,7 +1,27 @@
 import PageHeader from "../components/PageHeader";
-import UserCard from "../components/UserCard";
+import TraderCard from "../components/TraderCard";
 
 const users = [
+  {
+    name: "Bharat Sharma",
+    location1: "Tumkur Palle",
+    location2: "Muddur",
+    distance: "5 km",
+    image: "/images/traders/marketing-1.png",
+    cropName: "Groundnut",
+    cropImage: "/images/crops/groundnut.png",
+    postTitle: "Prasidda FPO Marketing",
+  },
+  {
+    name: "Anil kumar",
+    location1: "Nallavelli",
+    location2: "Kalwakuthy",
+    distance: "5 km",
+    image: "/images/traders/marketing-2.png",
+    cropName: "Sugarcane",
+    cropImage: "/images/crops/sugarcane.png",
+    postTitle: "Praharsha FPO Marketing",
+  },
   {
     name: "Ramu Naik",
     location1: "Pedda Gudem",
@@ -10,6 +30,7 @@ const users = [
     image: "/images/users/ramu.png",
     cropName: "Tomato",
     cropImage: "/images/crops/tomato.png",
+    postTitle: "Farmer",
   },
   {
     name: "Suresh Yadav",
@@ -19,7 +40,7 @@ const users = [
     image: "/images/users/suresh.png",
     cropName: "Paddy",
     cropImage: "/images/crops/paddy.png",
-    to: "/community/micro-irrigation/registered-users2",
+    postTitle: "Farmer",
   },
   {
     name: "Gopal Patel",
@@ -29,6 +50,7 @@ const users = [
     image: "/images/users/gopal.png",
     cropName: "Chilli",
     cropImage: "/images/crops/chilli.png",
+    postTitle: "Farmer",
   },
   {
     name: "Lakshmi Reddy",
@@ -38,6 +60,7 @@ const users = [
     image: "/images/users/lakshmi.png",
     cropName: "Cotton",
     cropImage: "/images/crops/cotton.png",
+    postTitle: "Farmer",
   },
   {
     name: "Rajesh Gowda",
@@ -47,6 +70,7 @@ const users = [
     image: "/images/users/rajesh.png",
     cropName: "Groundnut",
     cropImage: "/images/crops/groundnut.png",
+    postTitle: "Farmer",
   },
   {
     name: "Kamla Devi",
@@ -56,28 +80,23 @@ const users = [
     image: "/images/users/kamla.png",
     cropName: "Sugarcane",
     cropImage: "/images/crops/sugarcane.png",
+    postTitle: "Farmer",
   },
 ];
 
-const RegisteredUsers1 = () => {
+const Traders = () => {
   return (
     <div>
-      <PageHeader
-        title={"Micro Irrigation"}
-        to={"/community/micro-irrigation"}
-      />
+      <PageHeader title={"Market Place"} to={"/market-place/trader-calender"} />
       <div className="flex flex-col">
         {users.map((user) => (
-          <UserCard
+          <TraderCard
             key={user.name}
             name={user.name}
             image={user.image}
             location1={user.location1}
             location2={user.location2}
-            distance={user.distance}
-            cropName={user.cropName}
-            cropImage={user.cropImage}
-            to={user.to}
+            postTitle={user.postTitle}
           />
         ))}
       </div>
@@ -85,4 +104,4 @@ const RegisteredUsers1 = () => {
   );
 };
 
-export default RegisteredUsers1;
+export default Traders;

@@ -1,7 +1,28 @@
 import PageHeader from "../components/PageHeader";
+import TraderCard from "../components/TraderCard";
 import UserCard from "../components/UserCard";
 
 const users = [
+  {
+    name: "Bharat Sharma",
+    location1: "Tumkur Palle",
+    location2: "Muddur",
+    distance: "5 km",
+    image: "/images/traders/marketing-1.png",
+    cropName: "Groundnut",
+    cropImage: "/images/crops/groundnut.png",
+    postTitle: "Prasidda FPO Marketing",
+  },
+  {
+    name: "Anil kumar",
+    location1: "Nallavelli",
+    location2: "Kalwakuthy",
+    distance: "5 km",
+    image: "/images/traders/marketing-2.png",
+    cropName: "Sugarcane",
+    cropImage: "/images/crops/sugarcane.png",
+    postTitle: "Praharsha FPO Marketing",
+  },
   {
     name: " రాము నాయక్",
     location1: "పెద్ద గూడెం",
@@ -59,7 +80,7 @@ const users = [
   },
 ];
 
-const RegisteredUsers1Telugu = () => {
+const Traders1Telugu = () => {
   return (
     <div>
       <PageHeader
@@ -68,7 +89,7 @@ const RegisteredUsers1Telugu = () => {
       />
       <div className="flex flex-col">
         {users.map((user) => (
-          <UserCard
+          <TraderCard
             key={user.name}
             name={user.name}
             image={user.image}
@@ -85,4 +106,4 @@ const RegisteredUsers1Telugu = () => {
   );
 };
 
-export default RegisteredUsers1Telugu;
+export default Traders1Telugu;
