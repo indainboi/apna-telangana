@@ -8,7 +8,7 @@ const SoilReport = () => {
   ];
   return (
     <div>
-      <PageHeader title={"Soil Report"} />
+      <PageHeader title={"Soil Report"} to={"/crop-advisory"} />
 
       <div className="flex justify-between gap-2">
         {soilReportButtons.map((button) => (
