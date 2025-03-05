@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "../components/PageHeader";
 import { TbReport, TbVirusSearch } from "react-icons/tb";
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const crops = [
-  { name: "Add Crop", image: "/images/crops/plus.png" },
+  // { name: "Add Crop", image: "/images/crops/plus.png" },
   {
     name: "Chilli",
     image: "/images/crops/chilli.png",
     to: "/crop-advisory/crop",
   },
   { name: "Tomato", image: "/images/crops/tomato.png" },
-  { name: "Cotton", image: "/images/crops/cotton.png" },
+  { name: "Paddy", image: "/images/crops/paddy.png" },
   { name: "Groundnut", image: "/images/crops/groundnut.png" },
   { name: "Greengram", image: "/images/crops/greengram.png" },
   { name: "Redgram", image: "/images/crops/redgram.png" },
@@ -20,131 +20,11 @@ const crops = [
 ];
 
 const CropAdvisory = () => {
-  const farmCrops = [
-    {
-      id: 1,
-      cropName: "Chilli",
-      cropColor: "bg-green-50",
-      width: "100px",
-      height: "100px",
-    },
-    {
-      id: 2,
-      cropName: "Tomato",
-      cropColor: "bg-red-50",
-      width: "100px",
-      height: "100px",
-    },
-    {
-      id: 3,
-      cropName: "Bitter Gourd",
-      cropColor: "bg-orange-50",
-      width: "100px",
-      height: "100px",
-    },
-    {
-      id: 4,
-      cropName: "Onion",
-      cropColor: "bg-pink-50",
-      width: "100px",
-      height: "150px",
-    },
-    {
-      id: 5,
-      cropName: "Garlic",
-      cropColor: "bg-green-50",
-      width: "100px",
-      height: "150px",
-    },
-    {
-      id: 6,
-      cropName: "Tomato",
-      cropColor: "bg-orange-50",
-      width: "100px",
-      height: "150px",
-    },
-    {
-      id: 7,
-      cropName: "Chilli",
-      cropColor: "bg-purple-50",
-      width: "100px",
-      height: "150px",
-    },
-    {
-      id: 8,
-      cropName: "Paddy",
-      cropColor: "bg-yellow-50",
-      width: "250px",
-      height: "250px",
-    },
-  ];
   return (
     <div>
       <PageHeader title={"Crop Advisory"} to={"/homepage"} />
 
-      <h3 className="font-semibold mb-4 px-5">My Crops</h3>
-      <div className="px-5 overflow-auto">
-        <div className="flex justify-between gap-4 flex-wrap">
-          {crops.map((crop) => (
-            <CropCard
-              key={crop.name}
-              name={crop.name}
-              image={crop.image}
-              to={crop.to}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className="w-full h-[1px] bg-slate-300 mt-5"></div>
-
-      <h3 className="font-semibold mt-3 px-5">My Farm</h3>
-      <div className="flex flex-col items-center gap-8 mt-4">
-        <div>
-          {farmCrops.slice(0, 1).map((crop) => (
-            <CropFarm
-              key={crop.id}
-              cropName={crop.cropName}
-              cropColor={crop.cropColor}
-              width={crop.width}
-              height={crop.height}
-            />
-          ))}
-          <div className="flex ml-5">
-            {farmCrops.slice(1, 3).map((crop) => (
-              <CropFarm
-                key={crop.id}
-                cropName={crop.cropName}
-                cropColor={crop.cropColor}
-                width={crop.width}
-                height={crop.height}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="w-full flex px-5">
-          {farmCrops.slice(3, 7).map((crop) => (
-            <CropFarm
-              key={crop.id}
-              cropName={crop.cropName}
-              cropColor={crop.cropColor}
-              width={crop.width}
-              height={crop.height}
-            />
-          ))}
-        </div>
-        {farmCrops.slice(7, 9).map((crop) => (
-          <CropFarm
-            key={crop.id}
-            cropName={crop.cropName}
-            cropColor={crop.cropColor}
-            width={crop.width}
-            height={crop.height}
-          />
-        ))}
-      </div>
-
-      <div className="w-full h-[1px] bg-slate-300 mt-5"></div>
+      {/* <div className="w-full h-[1px] bg-slate-300 mt-5"></div> */}
 
       <div className="px-5 my-6 flex flex-col gap-5">
         {/* <div className='bg-[url("/images/crops/crop-advice.png")] h-[250px] bg-cover bg-center p-5'>
@@ -162,25 +42,54 @@ const CropAdvisory = () => {
           </div>
         </div> */}
 
-        <div className="w-full bg-[url('/images/crops/soil-report.png')] bg-cover px-6 py-9 text-white">
-          <div className="flex justify-between items-center">
-            <div className="flex gap-3 items-center">
-              <span className="text-lg">Soil Report</span>
-              <TbReport size={20} />
+        <div className="flex gap-3">
+          <Link
+            to={"/crop-advisory/soil-report"}
+            className="w-[50%] bg-[url('/images/crops/soil-report.png')] bg-cover bg-center px-6 py-9 text-white rounded-2xl"
+          >
+            <div className="flex justify-between items-center">
+              <div className="flex gap-3 items-center">
+                <span className="text-lg">Soil Report</span>
+                <TbReport size={22} />
+              </div>
+              {/* <FaArrowRight size={20} /> */}
             </div>
-            <FaArrowRight size={20} />
+          </Link>
+
+          <div className="w-[50%] bg-[url('/images/crops/crop-protection.png')] bg-cover bg-center px-6 py-9 text-white rounded-2xl">
+            <div className="flex justify-between items-center">
+              <div className="flex gap-3 items-center">
+                <span className="text-lg">Crop Protection</span>
+                <TbVirusSearch size={30} />
+              </div>
+              {/* <FaArrowRight size={20} /> */}
+            </div>
           </div>
         </div>
 
-        {/* <div className="w-full bg-[url('/images/crops/crop-protection.png')] bg-cover px-6 py-9 text-white">
-          <div className="flex justify-between items-center">
-            <div className="flex gap-3 items-center">
-              <span className="text-lg">Crop Protection</span>
-              <TbVirusSearch size={20} />
-            </div>
-            <FaArrowRight size={20} />
+        <div className="h-[8px] bg-slate-200"></div>
+
+        <div className="flex justify-between items-center">
+          <div>
+            <span className="text-md font-semibold mb-4 px-5">My Crops</span>
           </div>
-        </div> */}
+          <div className="bg-[#039667] text-sm text-white flex justify-between items-center p-2 rounded-lg">
+            <span>+ Add Crop</span>
+          </div>
+        </div>
+
+        <div className="px-5 overflow-auto">
+          <div className="flex gap-6 flex-wrap">
+            {crops.map((crop) => (
+              <CropCard
+                key={crop.name}
+                name={crop.name}
+                image={crop.image}
+                to={crop.to}
+              />
+            ))}
+          </div>
+        </div>
 
         <button className="w-full text-center text-white p-3 bg-[#049E6A] rounded-lg">
           Reach Out/Help

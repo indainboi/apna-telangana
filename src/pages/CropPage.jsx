@@ -1,7 +1,14 @@
-import React from "react";
 import PageHeader from "../components/PageHeader";
 import { TbReport, TbVirusSearch } from "react-icons/tb";
 import { FaArrowRight } from "react-icons/fa6";
+
+import Accordion from "@mui/material/Accordion";
+import AccordionActions from "@mui/material/AccordionActions";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Button from "@mui/material/Button";
 
 const crops = [
   { name: "Add Crop", image: "/images/crops/plus.png" },
@@ -93,7 +100,7 @@ const CropPage = () => {
           </div>
         </div>
 
-        <div className="w-full bg-[url('/images/crops/crop-protection.png')] bg-cover px-6 py-9 text-white">
+        {/* <div className="w-full bg-[url('/images/crops/crop-protection.png')] bg-cover px-6 py-9 text-white">
           <div className="flex justify-between items-center">
             <div className="flex gap-3 items-center">
               <span className="text-lg">Crop Protection</span>
@@ -101,11 +108,56 @@ const CropPage = () => {
             </div>
             <FaArrowRight size={20} />
           </div>
-        </div>
+        </div> */}
 
-        <button className="w-full text-center text-white p-3 bg-[#049E6A] rounded-lg">
+        {/* <button className="w-full text-center text-white p-3 bg-[#049E6A] rounded-lg">
           Reach Out/Help
-        </button>
+        </button> */}
+
+        <div>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <Typography component="span">Crop Protection</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel2-content"
+              id="panel2-header"
+            >
+              <Typography component="span">Crop Care</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel3-content"
+              id="panel3-header"
+            >
+              <Typography component="span">Fertilizer Calculator</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+              eget.
+            </AccordionDetails>
+          </Accordion>
+        </div>
       </div>
     </div>
   );

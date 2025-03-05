@@ -31,6 +31,13 @@ import SelectLanguage from "./pages/SelectLanguage";
 import MobileNumLogin from "./pages/MobileNumLogin";
 import OtpLogin from "./pages/OtpLogin";
 import CropPage from "./pages/CropPage";
+import SelectRole from "./pages/SelectRole";
+import AllowLocation from "./pages/AllowLocation";
+import CompleteProfile1 from "./pages/FieldLocation";
+import CropDetails from "./pages/CropDetails";
+import FieldLocation from "./pages/FieldLocation";
+import AllowNotifications from "./pages/AllowNotifications";
+import SoilReport from "./pages/SoilReport";
 
 function App() {
   return (
@@ -43,6 +50,13 @@ function App() {
 
           <Route path="/login" element={<MobileNumLogin />} />
           <Route path="/login-otp" element={<OtpLogin />} />
+          <Route path="/select-role" element={<SelectRole />} />
+          <Route path="/allow-location" element={<AllowLocation />} />
+          <Route path="/field-location" element={<FieldLocation />} />
+          <Route path="/crop-details" element={<CropDetails />} />
+          <Route path="/allow-notifications" element={<AllowNotifications />} />
+
+          <Route path="/crop-advisory/soil-report" element={<SoilReport />} />
 
           <Route path="/weather" element={<Weather />} />
           <Route path="/crop-advisory" element={<CropAdvisory />} />

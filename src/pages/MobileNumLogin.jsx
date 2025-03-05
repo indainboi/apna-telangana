@@ -34,7 +34,7 @@ const MobileNumLogin = () => {
         </div>
         <Link
           to={"/login-otp"}
-          className="w-full flex justify-center p-3 bg-[#039667] border border-solid border-gray-300 rounded-lg"
+          className="w-full text-white flex justify-center p-3 bg-[#039667] border border-solid border-gray-300 rounded-lg"
         >
           <span>CONTINUE</span>
         </Link>

@@ -19,7 +19,7 @@ const OtpLogin = () => {
       setIsOtpEmpty(true);
       setTimeout(() => setIsOtpEmpty(false), 3000);
     } else if (otp == "123") {
-      navigate("/select-role");
+      navigate("/allow-location");
     } else if (otp == "456") {
       navigate("/homepage");
     } else notVerified();
