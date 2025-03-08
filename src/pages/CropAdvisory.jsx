@@ -50,7 +50,7 @@ const CropAdvisory = () => {
             <div className="flex justify-between items-center">
               <div className="flex gap-3 items-center">
                 <span className="text-lg">Soil Report</span>
-                <TbReport size={22} />
+                <TbReport size={15} />
               </div>
               {/* <FaArrowRight size={20} /> */}
             </div>
@@ -59,8 +59,8 @@ const CropAdvisory = () => {
           <div className="w-[50%] bg-[url('/images/crops/crop-protection.png')] bg-cover bg-center px-6 py-9 text-white rounded-2xl">
             <div className="flex justify-between items-center">
               <div className="flex gap-3 items-center">
-                <span className="text-lg">Crop Protection</span>
-                <TbVirusSearch size={30} />
+                <span className="text-lg">Crop Doctor</span>
+                <TbVirusSearch size={15} />
               </div>
               {/* <FaArrowRight size={20} /> */}
             </div>

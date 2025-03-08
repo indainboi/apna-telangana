@@ -38,6 +38,7 @@ import CropDetails from "./pages/CropDetails";
 import FieldLocation from "./pages/FieldLocation";
 import AllowNotifications from "./pages/AllowNotifications";
 import SoilReport from "./pages/SoilReport";
+import BookSoilTest from "./pages/BookSoilTest";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
           <Route path="/allow-notifications" element={<AllowNotifications />} />
 
           <Route path="/crop-advisory/soil-report" element={<SoilReport />} />
+          <Route path="/crop-advisory/soil-report/book-test" element={<BookSoilTest />} />
 
           <Route path="/weather" element={<Weather />} />
           <Route path="/crop-advisory" element={<CropAdvisory />} />

@@ -98,10 +98,14 @@ const Weather = () => {
       {/* Hourly */}
       <div className="p-5">
         <h4 className="mb-3">Hourly</h4>
-        <div className="flex justify-between gap-3">
+        <div className="flex gap-3 overflow-x-auto whitespace-nowrap scrollbar-hide">
           <HourlyDetail time={"07:30 pm"} temperature={"24°C"} />
           <HourlyDetail time={"08:30 pm"} temperature={"23°C"} />
           <HourlyDetail time={"09:30 pm"} temperature={"22°C"} />
+          <HourlyDetail time={"10:30 pm"} temperature={"21°C"} />
+          <HourlyDetail time={"10:30 pm"} temperature={"21°C"} />
+          <HourlyDetail time={"10:30 pm"} temperature={"21°C"} />
+          <HourlyDetail time={"10:30 pm"} temperature={"21°C"} />
           <HourlyDetail time={"10:30 pm"} temperature={"21°C"} />
         </div>
       </div>
