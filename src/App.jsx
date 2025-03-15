@@ -39,6 +39,7 @@ import FieldLocation from "./pages/FieldLocation";
 import AllowNotifications from "./pages/AllowNotifications";
 import SoilReport from "./pages/SoilReport";
 import BookSoilTest from "./pages/BookSoilTest";
+import MarketplacePrice from "./pages/MarketplacePrice";
 
 function App() {
   return (
@@ -72,6 +73,10 @@ function App() {
           <Route
             path="/market-place/trader-calender"
             element={<TraderCalender />}
+          />
+          <Route
+            path="/market-place/price"
+            element={<MarketplacePrice />}
           />
           <Route
             path="/community/micro-irrigation"

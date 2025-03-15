@@ -19,6 +19,7 @@ const MarketPlace = () => {
     <div>
       <PageHeader title={"Marketplace"} to={"/homepage"} />
       <div className="px-5 py-4">
+      <Link to={"/market-place/price"}>
         <div className="bg-[url('/images/market-price.png')] bg-cover px-6 py-9 text-white mb-4">
           <div className="flex justify-between items-center">
             <div className="flex gap-3">
@@ -28,6 +29,7 @@ const MarketPlace = () => {
             <FaArrowRight size={20} />
           </div>
         </div>
+        </Link>
         <Link to={"/market-place/trader-calender"}>
           <div className="bg-[url('/images/trader-calender.png')] bg-cover px-6 py-9 text-white">
             <div className="flex justify-between items-center">
