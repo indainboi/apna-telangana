@@ -24,7 +24,6 @@ const MarketPlace = () => {
           <div className="flex justify-between items-center">
             <div className="flex gap-3">
               <span className="text-lg">Market Price</span>
-              <img src="/images/pricetag.svg" width={25} />
             </div>
             <FaArrowRight size={20} />
           </div>
@@ -34,8 +33,7 @@ const MarketPlace = () => {
           <div className="bg-[url('/images/trader-calender.png')] bg-cover px-6 py-9 text-white">
             <div className="flex justify-between items-center">
               <div className="flex gap-3 items-center">
-                <span className="text-lg">Trader Calender</span>
-                <SlCalender size={20} />
+                <span className="text-lg">Farmers and Traders</span>
               </div>
               <FaArrowRight size={20} />
             </div>

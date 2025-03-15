@@ -6,6 +6,10 @@ import BreakLine from "../components/BreakLine";
 import { GrLocation } from "react-icons/gr";
 import { PiFarm } from "react-icons/pi";
 import { BsPeople } from "react-icons/bs";
+import group1 from "./marketplace/group-1.png";
+import image97 from "./marketplace/image-97.png";
+import image98 from "./marketplace/image-98.png";
+import image from "./marketplace/image.svg";
 
 const locations = [
   {
@@ -15,7 +19,7 @@ const locations = [
     to: "/market-place/trader-calender/traders",
   },
   { name: "Miriyalaguda", area: "2523", number: "734" },
-  { name: "Mulugu", area: "1670", number: "621" },
+  // { name: "Mulugu", area: "1670", number: "621" },
 ];
 
 const TraderCalender = () => {
@@ -27,16 +31,78 @@ const TraderCalender = () => {
           to={"/market-place/farmer-calender"}
           className="w-full flex justify-center items-center text-sm rounded-md p-2 font-semibold border border-[#50C878]"
         >
-          Farmer Calender
+          Traders
         </Link>
         <Link
           to={"/market-place/trader-calender"}
           className="w-full flex justify-center items-center text-sm rounded-md p-2 font-semibold bg-[#50C878]"
         >
-          Trader Calender
+          Farmers
         </Link>
       </div>
+
       <div className="px-4 mb-4">
+      <div className="flex items-start gap-[15px] relative self-stretch w-full flex-[0_0_auto]">
+            <div className="flex flex-col w-[72.75px] items-center gap-2.5 relative border-b [border-bottom-style:solid] border-[#039667]">
+              <div className="relative w-16 h-16 bg-gray-50 rounded-[32px] border border-solid border-[#039667]">
+                <img
+                  className="absolute w-8 h-8 top-[15px] left-[15px]"
+                  alt="Frame"
+                  src={image}
+                />
+              </div>
+
+              <div className="text-[#039667] text-sm leading-6 whitespace-nowrap relative w-fit [font-family:'Inter-Regular',Helvetica] font-normal tracking-[0]">
+                Paddy
+              </div>
+            </div>
+
+            <div className="flex flex-col w-[72.75px] items-center gap-2.5 relative">
+              <div className="relative w-16 h-16 bg-gray-50 rounded-[32px] border border-solid border-[#f3f4f6]">
+                <img
+                  className="absolute w-10 h-[19px] top-[21px] left-[11px] object-cover"
+                  alt="Image"
+                  src={image98}
+                />
+              </div>
+
+              <div className="relative w-fit [font-family:'Inter-Regular',Helvetica] font-normal text-gray-700 text-sm tracking-[0] leading-6 whitespace-nowrap">
+                Chili
+              </div>
+            </div>
+
+            <div className="flex flex-col w-[72.75px] items-center gap-2.5 relative">
+              <div className="relative w-16 h-16 bg-gray-50 rounded-[32px] border border-solid border-[#f3f4f6]">
+                <img
+                  className="absolute w-[33px] h-[33px] top-[15px] left-3.5"
+                  alt="Image"
+                  src={image97}
+                />
+              </div>
+
+              <div className="relative w-fit [font-family:'Inter-Regular',Helvetica] font-normal text-gray-700 text-sm tracking-[0] leading-6 whitespace-nowrap">
+                Tomato
+              </div>
+            </div>
+
+            <div className="flex flex-col w-[72.75px] items-center gap-2.5 relative">
+              <div className="relative w-16 h-16 bg-gray-50 rounded-[32px] border border-solid border-[#f3f4f6]">
+                <img
+                  className="absolute w-4 h-4 top-[23px] left-[22px]"
+                  alt="Group"
+                  src={group1}
+                />
+              </div>
+
+              <div className="relative w-fit [font-family:'Inter-Regular',Helvetica] font-normal text-gray-700 text-sm tracking-[0] leading-6 whitespace-nowrap">
+                Other
+              </div>
+            </div>
+          </div>
+
+          <div className="relative self-stretch w-full h-2 bg-[#f3f4f6]" />
+
+      
         <img src="/images/market-place/calender.png" alt="" />
       </div>
       <div>

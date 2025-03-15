@@ -16,12 +16,12 @@ const FarmerCalender = () => {
         <div>
             <PageHeader title={"Market Place"} to={"/market-place"} />
             <div className='px-5 flex gap-2 mb-3'>
-                <Link to={"/market-place/farmer-calender"} className='w-full flex justify-center items-center text-sm bg-[#50C878] rounded-md p-2 font-semibold'>Farmer Calender</Link>
-                <Link to={"/market-place/trader-calender"} className='w-full flex justify-center items-center text-sm rounded-md p-2 font-semibold border border-[#50C878]'>Trader Calender</Link>
+                <Link to={"/market-place/farmer-calender"} className='w-full flex justify-center items-center text-sm bg-[#50C878] rounded-md p-2 font-semibold'>Traders</Link>
+                <Link to={"/market-place/trader-calender"} className='w-full flex justify-center items-center text-sm rounded-md p-2 font-semibold border border-[#50C878]'>Farmers</Link>
             </div>
-            <div className='px-4 mb-4'>
+            {/* <div className='px-4 mb-4'>
                 <img src="/images/market-place/calender.png" alt="" />
-            </div>
+            </div> */}
             <div>
                 <span className='font-semibold mb-3 px-5'>Traders</span>
                 {traders.map(trader => <TraderCard key={trader.distance} name={trader.name} image={trader.image} distance={trader.distance} />)}

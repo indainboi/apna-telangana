@@ -4,8 +4,7 @@ import { TbReport, TbVirusSearch } from "react-icons/tb";
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-const crops = [
-  // { name: "Add Crop", image: "/images/crops/plus.png" },
+const cropsList = [
   {
     name: "Chilli",
     image: "/images/crops/chilli.png",
@@ -13,13 +12,50 @@ const crops = [
   },
   { name: "Tomato", image: "/images/crops/tomato.png" },
   { name: "Paddy", image: "/images/crops/paddy.png" },
-  { name: "Groundnut", image: "/images/crops/groundnut.png" },
-  { name: "Greengram", image: "/images/crops/greengram.png" },
-  { name: "Redgram", image: "/images/crops/redgram.png" },
-  { name: "Sugarcane", image: "/images/crops/sugarcane.png" },
+  // { name: "Groundnut", image: "/images/crops/groundnut.png" },
+  // { name: "Greengram", image: "/images/crops/greengram.png" },
+  // { name: "Redgram", image: "/images/crops/redgram.png" },
+  // { name: "Sugarcane", image: "/images/crops/sugarcane.png" },
 ];
 
 const CropAdvisory = () => {
+
+  const crops = ["Wheat", "Rice", "Corn", "Sugarcane"];
+    const seedTypes = ["Hybrid", "Organic", "Traditional"];
+    const areaTypes = ["Acres", "Guntas", "Cents"];
+  
+    // State for form fields
+    const [totalArea, setTotalArea] = useState("");
+    const [cropList, setCropList] = useState([]);
+    const [showPopup, setShowPopup] = useState(false);
+  
+    // Form data for new crop
+    const [cropData, setCropData] = useState({
+      crop: "",
+      seedType: "",
+      dateSown: "",
+      cropArea: "",
+      areaType: "",
+    });
+  
+    // Handle form field change
+    const handleInputChange = (e) => {
+      setCropData({ ...cropData, [e.target.name]: e.target.value });
+    };
+  
+    // Save crop data
+    const saveCrop = () => {
+      setCropList([...cropList, cropData]);
+      setCropData({
+        crop: "",
+        seedType: "",
+        dateSown: "",
+        cropArea: "",
+        areaType: "",
+      }); // Reset form
+      setShowPopup(false); // Close popup
+    };
+
   return (
     <div>
       <PageHeader title={"Crop Advisory"} to={"/homepage"} />
@@ -73,14 +109,21 @@ const CropAdvisory = () => {
           <div>
             <span className="text-md font-semibold mb-4 px-5">My Crops</span>
           </div>
+
           <div className="bg-[#039667] text-sm text-white flex justify-between items-center p-2 rounded-lg">
-            <span>+ Add Crop</span>
+            <button
+          onClick={() => setShowPopup(true)}
+          className="px-6 py-2 bg-[#039667] text-white rounded-lg"
+        >
+          + Add Crop
+        </button>
           </div>
+
         </div>
 
         <div className="px-5 overflow-auto">
           <div className="flex gap-6 flex-wrap">
-            {crops.map((crop) => (
+            {cropsList.map((crop) => (
               <CropCard
                 key={crop.name}
                 name={crop.name}
@@ -95,6 +138,114 @@ const CropAdvisory = () => {
           Reach Out/Help
         </button>
       </div>
+
+
+      {/* Crop Form Popup */}
+      {showPopup && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-80">
+            <span className="text-lg font-medium">Add Crop</span>
+
+            {/* Crop Selection */}
+            <div className="flex flex-col mt-3">
+              <span>Crop</span>
+              <select
+                name="crop"
+                value={cropData.crop}
+                onChange={handleInputChange}
+                className="w-full border border-gray-300 rounded-lg p-2"
+              >
+                <option value="" disabled>
+                  Select Crop
+                </option>
+                {crops.map((crop, index) => (
+                  <option key={index} value={crop}>
+                    {crop}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Seed Type */}
+            <div className="flex flex-col mt-3">
+              <span>Seed Type</span>
+              <select
+                name="seedType"
+                value={cropData.seedType}
+                onChange={handleInputChange}
+                className="w-full border border-gray-300 rounded-lg p-2"
+              >
+                <option value="" disabled>
+                  Select Seed Type
+                </option>
+                {seedTypes.map((seed, index) => (
+                  <option key={index} value={seed}>
+                    {seed}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Date Sown */}
+            <div className="flex flex-col mt-3">
+              <span>Date Sown</span>
+              <input
+                type="date"
+                name="dateSown"
+                value={cropData.dateSown}
+                onChange={handleInputChange}
+                className="w-full border border-gray-300 rounded-lg p-2"
+              />
+            </div>
+
+            {/* Crop Area */}
+            <div className="flex flex-col mt-3">
+              <span>Crop Area</span>
+              <div className="flex gap-1">
+                <input
+                  type="number"
+                  name="cropArea"
+                  value={cropData.cropArea}
+                  onChange={handleInputChange}
+                  placeholder="Enter crop area"
+                  className="w-full border border-gray-300 rounded-lg p-2"
+                />
+                <select
+                  name="areaType"
+                  value={cropData.areaType}
+                  onChange={handleInputChange}
+                  className="w-full border border-gray-300 rounded-lg p-2"
+                >
+                  {areaTypes.map((area, index) => (
+                    <option key={index} value={area}>
+                      {area}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            {/* Save & Cancel Buttons */}
+            <div className="flex justify-between mt-4">
+              <button
+                onClick={() => setShowPopup(false)}
+                className="px-4 py-2 bg-gray-300 rounded-lg"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={saveCrop}
+                className="px-4 py-2 bg-[#039667] text-white rounded-lg"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      )}      
+
+
+
     </div>
   );
 };
