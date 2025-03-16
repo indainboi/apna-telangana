@@ -8,7 +8,7 @@ const SelectLanguage = () => {
         <div className="flex flex-col gap-5 justify-between items-center">
           <img src="/images/logo.png" alt="logo" className="w-[100px]" />
           <span className="text-4xl text-white font-semibold">
-            KISAAN PRIDE
+            APNA TELANGANA
           </span>
         </div>
         <div>
