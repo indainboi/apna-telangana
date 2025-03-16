@@ -7,8 +7,38 @@ const items = [
     name: "Micro Irrigation",
     image: "/images/communities-images/microirrigation.jpg",
   },
-  { name: "Chili", image: "/images/communities-images/chili.svg" },
-  { name: "Paddy DSR", image: "/images/communities-images/paddy-dsr.jpg" },
+  { 
+    name: "Chili",
+    image: "/images/communities-images/chili.svg",
+  },
+  { 
+    name: "Tomato",
+    image: "/images/communities-images/tomato.svg",
+  },
+  { 
+    name: "Ridge Gourd",
+    image: "/images/communities-images/ridge-gourd.svg",
+  },
+  { 
+    name: "Bitter Gourd",
+    image: "/images/communities-images/bitter-gourd.svg",
+  },
+  { 
+    name: "Capsicum",
+    image: "/images/communities-images/capsicum.svg",
+  },
+  { 
+    name: "Maize",
+    image: "/images/communities-images/maize.svg",
+  },
+  {
+    name: "Paddy",
+    image: "/images/communities-images/paddy.svg",
+  },
+  { 
+    name: "Groundnut",
+    image: "/images/communities-images/groundnut.svg",
+  },
   {
     name: "Natural Farming",
     image: "/images/communities-images/natural-farming.png",
