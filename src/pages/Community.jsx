@@ -7,7 +7,7 @@ const items = [
     name: "Micro Irrigation",
     image: "/images/communities-images/microirrigation.jpg",
   },
-  { name: "Vegetables", image: "/images/communities-images/vegetables.webp" },
+  { name: "Chili", image: "/images/communities-images/chili.svg" },
   { name: "Paddy DSR", image: "/images/communities-images/paddy-dsr.jpg" },
   {
     name: "Natural Farming",
@@ -66,7 +66,7 @@ const Community = () => {
       <PageHeader title={"Community"} to={"/homepage"} />
       <div className="px-5 mb-5">
         <h4 className="font-semibold mb-3">Registered Communities</h4>
-        <div className="flex justify-between">
+        <div className="grid grid-cols-3 gap-3">
           <Link to={"/community/micro-irrigation"}>
             <div className="flex flex-col text-center w-[100px]">
               <img
@@ -79,16 +79,23 @@ const Community = () => {
           <div className="flex flex-col text-center">
             <img
               className="w-[100px] h-[100px] object-cover rounded-lg mb-2 shadow-lg"
-              src="/images/communities-images/vegetables.webp"
+              src="/images/communities-images/chili.svg"
             />
-            <span className="text-sm">Vegetables</span>
+            <span className="text-sm">Chili</span>
           </div>
           <div className="flex flex-col text-center w-[100px]">
             <img
               className="w-[100px] h-[100px] object-cover rounded-lg mb-2 shadow-lg"
-              src="/images/communities-images/integrated-farming.jpg"
+              src="/images/communities-images/tomato.svg"
             />
-            <span className="text-sm">Integrated Farming</span>
+            <span className="text-sm">Tomato</span>
+          </div>
+          <div className="flex flex-col text-center w-[100px]">
+            <img
+              className="w-[100px] h-[100px] object-cover rounded-lg mb-2 shadow-lg"
+              src="/images/communities-images/paddy.svg"
+            />
+            <span className="text-sm">Paddy</span>
           </div>
         </div>
       </div>

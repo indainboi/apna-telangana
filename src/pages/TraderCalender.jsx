@@ -103,7 +103,7 @@ const TraderCalender = () => {
           <div className="relative self-stretch w-full h-2 bg-[#f3f4f6]" />
 
       
-        <img src="/images/market-place/calender.png" alt="" />
+        <img src="/images/market-place/calender.svg" alt="" />
       </div>
       <div>
         <span className="font-semibold mb-3 px-5">Locations</span>
