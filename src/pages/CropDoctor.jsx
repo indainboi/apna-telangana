@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CropDoctorPost from "../components/CropDoctorPost";
 import { MdArrowBackIos } from "react-icons/md";
 import { BiMicrophone, BiPlus } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const cropOptions = [
   { name: "Chili", emoji: "🌶️" },
@@ -17,10 +18,10 @@ const CropDoctor = () => {
   return (
     <div className="relative">
       <div className="flex justify-between align-middle px-5 py-4 sticky top-0 bg-white w-full border-b mb-2">
-        <div className="flex gap-2 items-center">
+        <Link to={"/crop-advisory"} className="flex gap-2 items-center">
           <MdArrowBackIos />
           <span>Crop Doctor</span>
-        </div>
+        </Link>
         <div
           onClick={() => setIsModalOpen(true)}
           className="w-10 h-10 border border-black rounded-full flex items-center justify-center cursor-pointer"
@@ -70,7 +71,7 @@ const CropDoctor = () => {
                 setIsNewPostModalOpen(true);
                 setIsModalOpen(false);
               }}
-              className="p-2 flex justify-center items-center sticky bottom-0 bg-[#039767] text-white"
+              className="p-2 flex justify-center items-center sticky bottom-0 bg-[#039767] cursor-pointer text-white"
             >
               Proceed to post
             </div>
