@@ -39,6 +39,7 @@ import FieldLocation from "./pages/FieldLocation";
 import AllowNotifications from "./pages/AllowNotifications";
 import SoilReport from "./pages/SoilReport";
 import BookSoilTest from "./pages/BookSoilTest";
+import ApnaApps from "./pages/ApnaApps";
 import MarketplacePrice from "./pages/MarketplacePrice";
 import CropDoctor from "./pages/CropDoctor";
 
@@ -60,6 +61,8 @@ function App() {
           <Route path="/allow-notifications" element={<AllowNotifications />} />
 
           <Route path="/crop-advisory/soil-report" element={<SoilReport />} />
+          <Route path="/crop-advisory/soil-report/book-test" element={<BookSoilTest />} />
+          <Route path="/apna-apps" element={<ApnaApps />} />
           <Route
             path="/crop-advisory/soil-report/book-test"
             element={<BookSoilTest />}

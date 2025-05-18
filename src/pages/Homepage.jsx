@@ -9,7 +9,8 @@ const menus = [
     to: "/crop-advisory",
   },
   { name: "Community", url: "/images/community.png", to: "/community" },
-  { name: "Marketplace", url: "/images/market_place.png", to: "/market-place" },
+  { name: "Apna Apps", url: "/images/market_place.png", to: "/apna-apps" },
+  // { name: "Marketplace", url: "/images/market_place.png", to: "/market-place" },
   {
     name: "Apna Telangana Social",
     url: "/images/social.png",
