@@ -186,7 +186,7 @@ const ApnaTelangana = () => {
 
 export default ApnaTelangana;
 
-const SocialMediaPost = ({
+export const SocialMediaPost = ({
   name,
   role,
   position,

@@ -19,42 +19,41 @@ const cropsList = [
 ];
 
 const CropAdvisory = () => {
-
   const crops = ["Wheat", "Rice", "Corn", "Sugarcane"];
-    const seedTypes = ["Hybrid", "Organic", "Traditional"];
-    const areaTypes = ["Acres", "Guntas", "Cents"];
-  
-    // State for form fields
-    const [totalArea, setTotalArea] = useState("");
-    const [cropList, setCropList] = useState([]);
-    const [showPopup, setShowPopup] = useState(false);
-  
-    // Form data for new crop
-    const [cropData, setCropData] = useState({
+  const seedTypes = ["Hybrid", "Organic", "Traditional"];
+  const areaTypes = ["Acres", "Guntas", "Cents"];
+
+  // State for form fields
+  const [totalArea, setTotalArea] = useState("");
+  const [cropList, setCropList] = useState([]);
+  const [showPopup, setShowPopup] = useState(false);
+
+  // Form data for new crop
+  const [cropData, setCropData] = useState({
+    crop: "",
+    seedType: "",
+    dateSown: "",
+    cropArea: "",
+    areaType: "",
+  });
+
+  // Handle form field change
+  const handleInputChange = (e) => {
+    setCropData({ ...cropData, [e.target.name]: e.target.value });
+  };
+
+  // Save crop data
+  const saveCrop = () => {
+    setCropList([...cropList, cropData]);
+    setCropData({
       crop: "",
       seedType: "",
       dateSown: "",
       cropArea: "",
       areaType: "",
-    });
-  
-    // Handle form field change
-    const handleInputChange = (e) => {
-      setCropData({ ...cropData, [e.target.name]: e.target.value });
-    };
-  
-    // Save crop data
-    const saveCrop = () => {
-      setCropList([...cropList, cropData]);
-      setCropData({
-        crop: "",
-        seedType: "",
-        dateSown: "",
-        cropArea: "",
-        areaType: "",
-      }); // Reset form
-      setShowPopup(false); // Close popup
-    };
+    }); // Reset form
+    setShowPopup(false); // Close popup
+  };
 
   return (
     <div>
@@ -92,7 +91,10 @@ const CropAdvisory = () => {
             </div>
           </Link>
 
-          <div className="w-[50%] bg-[url('/images/crops/crop-protection.png')] bg-cover bg-center px-6 py-9 text-white rounded-2xl">
+          <Link
+            to={"/crop-advisory/crop-doctor"}
+            className="w-[50%] bg-[url('/images/crops/crop-protection.png')] bg-cover bg-center px-6 py-9 text-white rounded-2xl"
+          >
             <div className="flex justify-between items-center">
               <div className="flex gap-3 items-center">
                 <span className="text-lg">Crop Doctor</span>
@@ -100,7 +102,7 @@ const CropAdvisory = () => {
               </div>
               {/* <FaArrowRight size={20} /> */}
             </div>
-          </div>
+          </Link>
         </div>
 
         <div className="h-[8px] bg-slate-200"></div>
@@ -112,13 +114,12 @@ const CropAdvisory = () => {
 
           <div className="bg-[#039667] text-sm text-white flex justify-between items-center p-2 rounded-lg">
             <button
-          onClick={() => setShowPopup(true)}
-          className="px-6 py-2 bg-[#039667] text-white rounded-lg"
-        >
-          + Add Crop
-        </button>
+              onClick={() => setShowPopup(true)}
+              className="px-6 py-2 bg-[#039667] text-white rounded-lg"
+            >
+              + Add Crop
+            </button>
           </div>
-
         </div>
 
         <div className="px-5 overflow-auto">
@@ -138,7 +139,6 @@ const CropAdvisory = () => {
           Reach Out/Help
         </button>
       </div>
-
 
       {/* Crop Form Popup */}
       {showPopup && (
@@ -242,10 +242,7 @@ const CropAdvisory = () => {
             </div>
           </div>
         </div>
-      )}      
-
-
-
+      )}
     </div>
   );
 };

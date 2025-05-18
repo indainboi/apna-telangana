@@ -40,6 +40,7 @@ import AllowNotifications from "./pages/AllowNotifications";
 import SoilReport from "./pages/SoilReport";
 import BookSoilTest from "./pages/BookSoilTest";
 import MarketplacePrice from "./pages/MarketplacePrice";
+import CropDoctor from "./pages/CropDoctor";
 
 function App() {
   return (
@@ -59,11 +60,16 @@ function App() {
           <Route path="/allow-notifications" element={<AllowNotifications />} />
 
           <Route path="/crop-advisory/soil-report" element={<SoilReport />} />
-          <Route path="/crop-advisory/soil-report/book-test" element={<BookSoilTest />} />
+          <Route
+            path="/crop-advisory/soil-report/book-test"
+            element={<BookSoilTest />}
+          />
 
           <Route path="/weather" element={<Weather />} />
           <Route path="/crop-advisory" element={<CropAdvisory />} />
           <Route path="/crop-advisory/crop" element={<CropPage />} />
+          <Route path="/crop-advisory/crop-doctor" element={<CropDoctor />} />
+
           <Route path="/community" element={<Community />} />
           <Route path="/market-place" element={<MarketPlace />} />
           <Route
@@ -74,10 +80,7 @@ function App() {
             path="/market-place/trader-calender"
             element={<TraderCalender />}
           />
-          <Route
-            path="/market-place/price"
-            element={<MarketplacePrice />}
-          />
+          <Route path="/market-place/price" element={<MarketplacePrice />} />
           <Route
             path="/community/micro-irrigation"
             element={<CommunityPage />}
