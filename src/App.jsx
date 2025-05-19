@@ -40,6 +40,7 @@ import AllowNotifications from "./pages/AllowNotifications";
 import SoilReport from "./pages/SoilReport";
 import BookSoilTest from "./pages/BookSoilTest";
 import ApnaApps from "./pages/ApnaApps";
+import BharatAgri from "./pages/BharatAgri";
 import MarketplacePrice from "./pages/MarketplacePrice";
 import CropDoctor from "./pages/CropDoctor";
 
@@ -67,6 +68,7 @@ function App() {
             path="/crop-advisory/soil-report/book-test"
             element={<BookSoilTest />}
           />
+          <Route path="/apna-apps/bharat-agri" element={<BharatAgri />} />
 
           <Route path="/weather" element={<Weather />} />
           <Route path="/crop-advisory" element={<CropAdvisory />} />
