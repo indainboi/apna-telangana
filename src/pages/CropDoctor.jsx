@@ -31,7 +31,7 @@ const CropDoctor = () => {
       </div>
       <CropDoctorPost />
       {!isModalOpen && newPostModalOpen && (
-        <div className="absolute inset-0 flex justify-center items-center p-10 backdrop-blur-sm">
+        <div className="fixed inset-0 flex justify-center items-center p-10 backdrop-blur-sm">
           <div className="p-4 bg-white rounded w-full flex items-center gap-4 flex-col shadow-md">
             <span>Choose Crop</span>
             <div className="flex gap-2">
@@ -60,8 +60,8 @@ const CropDoctor = () => {
         </div>
       )}
       {isModalOpen && !newPostModalOpen && (
-        <div className="absolute inset-0 flex justify-center items-center p-2 backdrop-blur-sm">
-          <div className="w-[95%] h-[80%] bg-white overflow-auto rounded-2xl shadow-xl">
+        <div className="fixed inset-0 flex justify-center items-center p-2 backdrop-blur-sm z-50">
+          <div className="w-[95%] h-[90vh] bg-white overflow-auto rounded-2xl shadow-xl">
             <div className="p-2 font-semibold flex justify-center items-center sticky top-0 bg-white">
               Queries raised near you
             </div>
@@ -79,7 +79,7 @@ const CropDoctor = () => {
         </div>
       )}
       {createPost && (
-        <div className="absolute inset-0 flex justify-center items-center p-10 backdrop-blur-sm">
+        <div className="fixed inset-0 flex justify-center items-center p-10 backdrop-blur-sm">
           <div className="p-4 bg-white rounded w-full flex items-center gap-4 flex-col shadow-md">
             <div className="flex justify-center items-center text-xs text-slate-700 gap-3">
               <button className="py-2 px-4 border border-slate-200 rounded-md">
